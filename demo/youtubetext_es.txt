@@ -1,0 +1,20 @@
+﻿El Editor de autocorrección es un complemento de Paratext para la lista de autocorrección de un proyecto: las teclas que usted escribe y el carácter especial que Paratext pone en su lugar. Agregue, cambie y elimine entradas, y forme cualquier carácter que necesite, también letras con marcas combinables, con el Explorador de caracteres.
+
+Descargue el complemento (AutoCorrectEditor.zip) de la carpeta Paratext Plugins:
+https://short.do/HgUb7T
+
+0:25 ¿Cómo abro el Editor de autocorrección?
+0:32 ¿Qué muestra la lista?
+0:57 ¿Cómo agrego una entrada?
+1:14 ¿Cómo encuentro caracteres especiales y marcas combinables?
+1:34 ¿Cómo formo una letra con una marca, como la a con macrón debajo?
+1:55 ¿Cómo sé que se agregó la entrada?
+2:19 ¿Cómo cambio o elimino una entrada?
+2:39 ¿Puedo cambiar la fuente o el idioma del programa?
+2:55 ¿Cómo guardo la lista?
+3:04 ¿Por qué Paratext todavía no usa mis nuevas entradas?
+3:18 ¿Cómo instalo la herramienta?
+
+Creado con Claude AI.
+Narración: voz generada por IA (Microsoft Azure AI Speech, voz "Jorge").
+Música: "Smile" de Bensound, © Bensound. Music: https://www.bensound.com

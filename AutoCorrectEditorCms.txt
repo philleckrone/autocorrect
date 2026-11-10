@@ -1,0 +1,85 @@
+AUTOCORRECT EDITOR (PARATEXT CMS VERSION)
+==========================================
+
+PURPOSE
+Paratext-integrated version of the AutoCorrect Editor. When invoked from
+Paratext's custom tools menu it automatically opens the current project's
+autocorrect.txt file, so there is no need to locate or browse for the file
+manually. Editing features are identical to the standalone version.
+
+VIDEO OVERVIEW
+https://www.loom.com/share/3e0abe19ed7042229a655fde8f42482e
+
+INSTALLATION
+------------
+Copy all three files to your My Paratext 9 Projects\cms folder:
+
+  autocorrecteditor.cms
+  autocorrecteditor.py
+  AutoCorrectEditorCms.exe
+
+Restart Paratext after copying the files. The tool will appear under
+Tools > AutoCorrect > AutoCorrect Editor in Paratext's menu.
+
+HOW TO USE
+----------
+1. In Paratext, open the project whose autocorrect entries you want to edit.
+
+2. Go to Custom Tools > AutoCorrect > AutoCorrect Editor. The editor launches and
+   automatically loads that project's autocorrect.txt file.
+
+3. To add an entry:
+   - Type the key sequence (what you type in Paratext) in the "Type sequence"
+     field.
+   - Type or select the output character in the "Output character" field.
+   - Click Add or press Enter. The entry appears in the list above.
+
+4. To edit an entry:
+   - Click its row in the list. The fields below populate with the current
+     values and the Add button changes to Update.
+   - Modify the fields and click Update (or press Enter).
+   - Click Clear to cancel without saving changes.
+
+5. To delete an entry:
+   - Select its row and press the Delete key, or use Edit > Delete Entry.
+
+6. To find a character using the browser:
+   - Choose a Unicode block from the "Block" dropdown at the bottom of the
+     window.
+   - Optionally filter by typing a character or hex code point (e.g. 00E0)
+     in the Search box.
+   - Click any character to insert it into whichever input field was last
+     focused (Type sequence or Output character).
+
+7. Use the Font and Size dropdowns in the toolbar to preview characters in
+   your script.
+
+8. Save with File > Save (Ctrl+S). The yellow banner at the top of the
+   window is a reminder to restart Paratext after saving so that changes
+   take effect.
+
+FEATURES
+--------
+  Automatic file loading
+    The editor receives the project's autocorrect.txt path directly from
+    Paratext and opens it on launch. No file dialog required.
+
+  Multilingual UI
+    Interface text is available in English, Espanol, Francais, Portugues,
+    and Simplified Chinese. Change language from the Language dropdown in
+    the toolbar.
+
+  Encoding detection
+    When opening an existing file the editor automatically detects UTF-16 LE,
+    UTF-16 BE, or UTF-8 encoding. It always writes in UTF-16 LE with BOM,
+    which is the format Paratext expects.
+
+  Character browser
+    Covers 13 Unicode blocks: Basic Latin, Latin-1 Supplement,
+    Latin Extended-A, Latin Extended-B, Combining Diacritical Marks,
+    Greek and Coptic, Hebrew, Arabic, Syriac, Ethiopic, Latin Extended
+    Additional, General Punctuation, and Currency Symbols.
+
+  Unsaved-changes tracking
+    An asterisk (*) appears in the title bar and status bar whenever there
+    are unsaved changes. Opening a new file or exiting will prompt to save.

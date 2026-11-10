@@ -1,0 +1,22 @@
+﻿AutoCorrect Editor is a Paratext tool for a project's autocorrect list: the keys you type, and the special character Paratext puts in their place. Add, change and remove entries, and build any character you need, including letters with combining marks, with the Character Browser.
+
+Download Install_Phils_tools.exe from the Paratext Plugins folder, and tick AutoCorrect Editor in it:
+https://short.do/HgUb7T
+
+0:23 How do I open AutoCorrect Editor?
+0:29 What does the list show?
+0:51 How do I add an entry?
+1:07 How do I find special characters and combining marks?
+1:23 How do I build a letter with a mark, like a with a macron below?
+1:41 How do I know the entry was added?
+2:03 How do I change or remove an entry?
+2:20 Can I change the font or the program's language?
+2:35 How do I save the list?
+2:43 Why doesn't Paratext use my new entries yet?
+2:55 How do I install the tool?
+
+Created with Claude AI.
+Narration: AI-generated voice (Microsoft Azure AI Speech, voice "Jenny").
+Music from Free To Use
+Source: https://freetouse.com/music
+Coconut Kind of Love by Aetheric

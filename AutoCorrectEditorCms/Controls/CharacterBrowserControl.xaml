@@ -1,0 +1,107 @@
+<UserControl x:Class="AutoCorrectEditor.Controls.CharacterBrowserControl"
+             x:Name="BrowserRoot"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Toolbar: block selector + search -->
+        <Border Grid.Row="0" Background="#F5F5F5" BorderBrush="#DDDDDD" BorderThickness="0,0,0,1" Padding="6,4">
+            <DockPanel>
+                <TextBlock Text="{DynamicResource Browser_Block}" VerticalAlignment="Center" Margin="0,0,4,0"/>
+                <ComboBox x:Name="BlockCombo"
+                          DisplayMemberPath="Name"
+                          Width="220"
+                          Margin="0,0,16,0"
+                          DockPanel.Dock="Left"
+                          SelectionChanged="BlockCombo_SelectionChanged"/>
+                <TextBlock Text="{DynamicResource Browser_Search}" VerticalAlignment="Center" Margin="0,0,4,0" DockPanel.Dock="Left"/>
+                <TextBox x:Name="SearchBox"
+                         Width="130"
+                         DockPanel.Dock="Left"
+                         TextChanged="SearchBox_TextChanged"
+                         ToolTip="{DynamicResource Browser_SearchTooltip}"/>
+                <TextBlock x:Name="CountLabel"
+                           VerticalAlignment="Center"
+                           Foreground="Gray"
+                           Margin="12,0,0,0"
+                           DockPanel.Dock="Left"/>
+            </DockPanel>
+        </Border>
+
+        <!-- Character area -->
+        <ScrollViewer Grid.Row="1"
+                      VerticalScrollBarVisibility="Auto"
+                      HorizontalScrollBarVisibility="Disabled">
+            <StackPanel>
+
+                <!-- Normal mode: single block -->
+                <ItemsControl x:Name="CharGrid" Margin="4">
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapPanel/>
+                        </ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <Button Padding="5,3"
+                                    FontSize="{Binding DisplayFontSize, RelativeSource={RelativeSource AncestorType=UserControl}}"
+                                    FontFamily="{Binding DisplayFont, RelativeSource={RelativeSource AncestorType=UserControl}}"
+                                    Content="{Binding Display}"
+                                    ToolTip="{Binding Tooltip}"
+                                    Tag="{Binding Character}"
+                                    Click="CharButton_Click"
+                                    Margin="1"/>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+
+                <!-- Search mode: grouped results across all blocks -->
+                <ItemsControl x:Name="SearchResultsPanel" Visibility="Collapsed" Margin="4,0,4,4">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Margin="0,4,0,0">
+                                <Border Background="#EBEBEB" BorderBrush="#DDDDDD" BorderThickness="1" Padding="6,3">
+                                    <DockPanel>
+                                        <Button Content="{DynamicResource Browser_BrowseBlock}"
+                                                DockPanel.Dock="Right"
+                                                Padding="6,1"
+                                                FontFamily="Segoe UI"
+                                                FontSize="11"
+                                                Click="BrowseBlock_Click"/>
+                                        <TextBlock Text="{Binding BlockName}"
+                                                   FontWeight="SemiBold"
+                                                   VerticalAlignment="Center"/>
+                                    </DockPanel>
+                                </Border>
+                                <ItemsControl ItemsSource="{Binding Items}">
+                                    <ItemsControl.ItemsPanel>
+                                        <ItemsPanelTemplate>
+                                            <WrapPanel/>
+                                        </ItemsPanelTemplate>
+                                    </ItemsControl.ItemsPanel>
+                                    <ItemsControl.ItemTemplate>
+                                        <DataTemplate>
+                                            <Button Padding="5,3"
+                                                    FontSize="{Binding DisplayFontSize, ElementName=BrowserRoot}"
+                                                    FontFamily="{Binding DisplayFont, ElementName=BrowserRoot}"
+                                                    Content="{Binding Display}"
+                                                    ToolTip="{Binding Tooltip}"
+                                                    Tag="{Binding Character}"
+                                                    Click="CharButton_Click"
+                                                    Margin="1"/>
+                                        </DataTemplate>
+                                    </ItemsControl.ItemTemplate>
+                                </ItemsControl>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</UserControl>

@@ -1,0 +1,292 @@
+{
+  "cues": "{1} before a phrase shows box 1 of the step from there on, {0,2} boxes 0 and 2, {} none; the pointer goes on the first box named. Cues are not spoken or shown. 'q' is the step's question in the YouTube timecodes (youtubetext.txt).",
+  "youtube": {
+    "en": {
+      "about": "AutoCorrect Editor is a Paratext tool for a project's autocorrect list: the keys you type, and the special character Paratext puts in their place. Add, change and remove entries, and build any character you need, including letters with combining marks, with the Character Browser.",
+      "download": "Download Install_Phils_tools.exe from the Paratext Plugins folder, and tick AutoCorrect Editor in it:",
+      "link": "https://short.do/HgUb7T",
+      "credits": [
+        "Created with Claude AI.",
+        "Narration: AI-generated voice (Microsoft Azure AI Speech, voice \"Jenny\").",
+        "Music from Free To Use",
+        "Source: https://freetouse.com/music",
+        "Coconut Kind of Love by Aetheric"
+      ]
+    },
+    "es": {
+      "about": "El Editor de autocorrección es un complemento de Paratext para la lista de autocorrección de un proyecto: las teclas que usted escribe y el carácter especial que Paratext pone en su lugar. Agregue, cambie y elimine entradas, y forme cualquier carácter que necesite, también letras con marcas combinables, con el Explorador de caracteres.",
+      "download": "Descargue Install_Phils_tools.exe de la carpeta Paratext Plugins y marque Editor de autocorrección:",
+      "link": "https://short.do/HgUb7T",
+      "credits": [
+        "Creado con Claude AI.",
+        "Narración: voz generada por IA (Microsoft Azure AI Speech, voz \"Jorge\").",
+        "Music from Free To Use",
+        "Source: https://freetouse.com/music",
+        "Coconut Kind of Love by Aetheric"
+      ]
+    },
+    "fr": {
+      "about": "L'Éditeur de correction automatique est un outil Paratext pour la liste de correction automatique d'un projet : les touches que vous tapez, et le caractère spécial que Paratext met à leur place. Ajoutez, modifiez et supprimez des entrées, et formez n'importe quel caractère, y compris des lettres avec diacritiques combinants, grâce au Navigateur de caractères.",
+      "download": "Téléchargez Install_Phils_tools.exe depuis le dossier Paratext Plugins et cochez Éditeur de correction automatique :",
+      "link": "https://short.do/HgUb7T",
+      "credits": [
+        "Créé avec Claude AI.",
+        "Narration : voix générée par IA (Microsoft Azure AI Speech, voix « Rémy »).",
+        "Music from Free To Use",
+        "Source: https://freetouse.com/music",
+        "Coconut Kind of Love by Aetheric"
+      ]
+    }
+  },
+  "steps": [
+    {
+      "id": "title",
+      "en": {
+        "title": "AutoCorrect Editor",
+        "sub": "A Paratext tool: type simple keys, get special characters",
+        "text": "AutoCorrect Editor is a Paratext tool. It shows a project's autocorrect list: the keys you type, and the special character Paratext puts in their place. You can add, change and remove entries, and build any character you need."
+      },
+      "es": {
+        "title": "Editor de autocorrección",
+        "sub": "Un complemento de Paratext: teclas sencillas, caracteres especiales",
+        "text": "El Editor de autocorrección es un complemento de Paratext. Muestra la lista de autocorrección de un proyecto: las teclas que usted escribe y el carácter especial que Paratext pone en su lugar. Puede agregar, cambiar y eliminar entradas, y formar cualquier carácter que necesite."
+      },
+      "fr": {
+        "title": "Éditeur de correction automatique",
+        "sub": "Un outil Paratext : des touches simples, des caractères spéciaux",
+        "text": "L'Éditeur de correction automatique est un outil de Paratext. Il affiche la liste de correction automatique d'un projet : les touches que vous tapez, et le caractère spécial que Paratext met à leur place. Vous pouvez ajouter, modifier et supprimer des entrées, et former n'importe quel caractère dont vous avez besoin."
+      }
+    },
+    {
+      "id": "s00_menu",
+      "en": {
+        "title": "Open it from the Tools menu",
+        "q": "How do I open AutoCorrect Editor?",
+        "text": "In Paratext, choose {0}Tools, then {1}AutoCorrect Editor."
+      },
+      "es": {
+        "title": "Se abre desde el menú Herramientas",
+        "q": "¿Cómo abro el Editor de autocorrección?",
+        "text": "En Paratext, elija {0}Herramientas y luego {1}Editor de autocorrección."
+      },
+      "fr": {
+        "title": "Ouvrez-le depuis le menu Outils",
+        "q": "Comment ouvrir l'Éditeur de correction automatique ?",
+        "text": "Dans Paratext, choisissez {0}Outils, puis {1}Éditeur de correction automatique."
+      }
+    },
+    {
+      "id": "s01_open",
+      "en": {
+        "title": "It opens your project's list",
+        "q": "What does the list show?",
+        "text": "The editor opens the autocorrect list of the project you are working on. {0}Each entry has the keys you type, and the character Paratext puts in their place. {1}The third column shows the Unicode value of each character. {}If the project has no autocorrect file yet, the window opens empty, ready for your first entries."
+      },
+      "es": {
+        "title": "Se abre la lista de su proyecto",
+        "q": "¿Qué muestra la lista?",
+        "text": "El editor abre la lista de autocorrección del proyecto en el que usted trabaja. {0}Cada entrada tiene las teclas que usted escribe y el carácter que Paratext pone en su lugar. {1}La tercera columna muestra el valor Unicode de cada carácter. {}Si el proyecto todavía no tiene archivo de autocorrección, la ventana se abre vacía, lista para sus primeras entradas."
+      },
+      "fr": {
+        "title": "Il ouvre la liste de votre projet",
+        "q": "Que montre la liste ?",
+        "text": "L'éditeur ouvre la liste de correction automatique du projet sur lequel vous travaillez. {0}Chaque entrée contient les touches que vous tapez, et le caractère que Paratext met à leur place. {1}La troisième colonne indique la valeur Unicode de chaque caractère. {}Si le projet n'a pas encore de fichier de correction automatique, la fenêtre s'ouvre vide, prête pour vos premières entrées."
+      }
+    },
+    {
+      "id": "s02_type",
+      "en": {
+        "title": "Add an entry",
+        "q": "How do I add an entry?",
+        "text": "{0}In the Type sequence box, type the keys you will press in Paratext. Here, a and an underscore. {1}In the Output character box, type the letter a. Next, we add a mark below it."
+      },
+      "es": {
+        "title": "Agregar una entrada",
+        "q": "¿Cómo agrego una entrada?",
+        "text": "{0}En la casilla Secuencia, escriba las teclas que pulsará en Paratext. Aquí, la a y un guion bajo. {1}En la casilla Carácter de salida, escriba la letra a. Ahora le agregamos una marca debajo."
+      },
+      "fr": {
+        "title": "Ajouter une entrée",
+        "q": "Comment ajouter une entrée ?",
+        "text": "{0}Dans la case Séquence, tapez les touches que vous utiliserez dans Paratext. Ici, a et un tiret bas. {1}Dans la case Caractère de sortie, tapez la lettre a. Ensuite, nous ajoutons un signe sous cette lettre."
+      }
+    },
+    {
+      "id": "s03_blocks",
+      "en": {
+        "title": "Choose a group of characters",
+        "q": "How do I find special characters and combining marks?",
+        "text": "{0}The Character Browser shows one group of characters at a time. It starts with Basic Latin. Open the Block list to choose another group. {1}For marks that go on a letter, choose Combining Diacritical Marks."
+      },
+      "es": {
+        "title": "Elegir un grupo de caracteres",
+        "q": "¿Cómo encuentro caracteres especiales y marcas combinables?",
+        "text": "{0}El Explorador de caracteres muestra un grupo de caracteres a la vez. Empieza con Basic Latin. Abra la lista Bloque para elegir otro grupo. {1}Para las marcas que se combinan con una letra, elija Combining Diacritical Marks, las marcas diacríticas combinables."
+      },
+      "fr": {
+        "title": "Choisir un groupe de caractères",
+        "q": "Comment trouver des caractères spéciaux et des diacritiques combinants ?",
+        "text": "{0}Le Navigateur de caractères affiche un groupe de caractères à la fois. Il commence par Basic Latin. Ouvrez la liste Bloc pour choisir un autre groupe. {1}Pour les signes qui se combinent avec une lettre, choisissez Combining Diacritical Marks, les diacritiques combinants."
+      }
+    },
+    {
+      "id": "s04_browser",
+      "en": {
+        "title": "Add a combining mark",
+        "q": "How do I build a letter with a mark, like a with a macron below?",
+        "text": "{0}Now the browser shows the combining marks. {1}Click the macron below, code 0331, and {2}it goes after the a. Together they make a with a macron below. {3}You can also find any character by typing its code in the Search box."
+      },
+      "es": {
+        "title": "Agregar una marca combinable",
+        "q": "¿Cómo formo una letra con una marca, como la a con macrón debajo?",
+        "text": "{0}Ahora el explorador muestra las marcas combinables. {1}Haga clic en el macrón inferior, código 0331, y {2}se coloca después de la a. Juntos forman la a con macrón debajo. {3}También puede buscar cualquier carácter escribiendo su código en la casilla Buscar."
+      },
+      "fr": {
+        "title": "Ajouter un diacritique combinant",
+        "q": "Comment former une lettre avec un diacritique, comme a avec macron souscrit ?",
+        "text": "{0}Le navigateur affiche maintenant les diacritiques combinants. {1}Cliquez sur le macron souscrit, code 0331, et {2}il se place après le a. Ensemble, ils forment un a avec macron souscrit. {3}Vous pouvez aussi trouver n'importe quel caractère en tapant son code dans la case Rechercher."
+      }
+    },
+    {
+      "id": "s05_added",
+      "en": {
+        "title": "The entry is added",
+        "q": "How do I know the entry was added?",
+        "text": "{0}Click Add, or press Enter. {1}The new entry appears at the end of the list. Its Unicode values show the letter a, 0061, and the mark, 0331. {2}The status bar counts the entries, and the star shows there are unsaved changes."
+      },
+      "es": {
+        "title": "La entrada se agrega",
+        "q": "¿Cómo sé que se agregó la entrada?",
+        "text": "{0}Haga clic en Agregar, o pulse Entrar. {1}La nueva entrada aparece al final de la lista. Sus valores Unicode muestran la letra a, 0061, y la marca, 0331. {2}La barra de estado cuenta las entradas, y el asterisco indica que hay cambios sin guardar."
+      },
+      "fr": {
+        "title": "L'entrée est ajoutée",
+        "q": "Comment savoir si l'entrée a été ajoutée ?",
+        "text": "{0}Cliquez sur Ajouter, ou appuyez sur Entrée. {1}La nouvelle entrée apparaît à la fin de la liste. Ses valeurs Unicode montrent la lettre a, 0061, et le diacritique, 0331. {2}La barre d'état compte les entrées, et l'astérisque indique qu'il y a des modifications non enregistrées."
+      }
+    },
+    {
+      "id": "s06_change",
+      "en": {
+        "title": "Change or remove an entry",
+        "q": "How do I change or remove an entry?",
+        "text": "To change an entry, {0}click it in the table. {1}Its keys and character move to the boxes below, and {2}the Add button becomes Update. Change them, then click Update. To remove an entry, click it and press Delete."
+      },
+      "es": {
+        "title": "Cambiar o eliminar una entrada",
+        "q": "¿Cómo cambio o elimino una entrada?",
+        "text": "Para cambiar una entrada, {0}haga clic en ella en la tabla. {1}Sus teclas y su carácter pasan a las casillas de abajo, y {2}el botón Agregar se convierte en Actualizar. Cámbielos y haga clic en Actualizar. Para eliminar una entrada, haga clic en ella y pulse Suprimir."
+      },
+      "fr": {
+        "title": "Modifier ou supprimer une entrée",
+        "q": "Comment modifier ou supprimer une entrée ?",
+        "text": "Pour modifier une entrée, {0}cliquez dessus dans le tableau. {1}Ses touches et son caractère passent dans les cases du bas, et {2}le bouton Ajouter devient Mettre à jour. Modifiez-les, puis cliquez sur Mettre à jour. Pour supprimer une entrée, cliquez dessus et appuyez sur Suppr."
+      }
+    },
+    {
+      "id": "s07_view",
+      "en": {
+        "title": "Font, size and language",
+        "q": "Can I change the font or the program's language?",
+        "text": "{0}The Font and Size boxes change only how characters look on your screen, not the file. {1}The Language box changes the program's own words: English, Spanish, French, Portuguese or Chinese."
+      },
+      "es": {
+        "title": "Fuente, tamaño e idioma",
+        "q": "¿Puedo cambiar la fuente o el idioma del programa?",
+        "text": "{0}Las casillas Fuente y Tamaño solo cambian cómo se ven los caracteres en su pantalla, no el archivo. {1}La casilla Idioma cambia las palabras del propio programa: inglés, español, francés, portugués o chino."
+      },
+      "fr": {
+        "title": "Police, taille et langue",
+        "q": "Puis-je changer la police ou la langue du programme ?",
+        "text": "{0}Les cases Police et Taille changent seulement l'apparence des caractères à l'écran, pas le fichier. {1}La case Langue change les mots du programme lui-même : anglais, espagnol, français, portugais ou chinois."
+      }
+    },
+    {
+      "id": "s08_save",
+      "en": {
+        "title": "Save the list",
+        "q": "How do I save the list?",
+        "text": "{0}Choose File, then Save. The list is saved in the project's autocorrect file."
+      },
+      "es": {
+        "title": "Guardar la lista",
+        "q": "¿Cómo guardo la lista?",
+        "text": "{0}Elija Archivo y luego Guardar. La lista se guarda en el archivo de autocorrección del proyecto."
+      },
+      "fr": {
+        "title": "Enregistrer la liste",
+        "q": "Comment enregistrer la liste ?",
+        "text": "{0}Choisissez Fichier, puis Enregistrer. La liste est enregistrée dans le fichier de correction automatique du projet."
+      }
+    },
+    {
+      "id": "s09_restart",
+      "en": {
+        "title": "Restart Paratext",
+        "q": "Why doesn't Paratext use my new entries yet?",
+        "text": "{0}The star is gone: everything is saved. {1}Paratext uses the new entries after you restart it. The yellow line is there to remind you."
+      },
+      "es": {
+        "title": "Reiniciar Paratext",
+        "q": "¿Por qué Paratext todavía no usa mis nuevas entradas?",
+        "text": "{0}El asterisco desapareció: todo está guardado. {1}Paratext usa las nuevas entradas después de reiniciarlo. La línea amarilla está ahí para recordárselo."
+      },
+      "fr": {
+        "title": "Redémarrer Paratext",
+        "q": "Pourquoi Paratext n'utilise-t-il pas encore mes nouvelles entrées ?",
+        "text": "{0}L'astérisque a disparu : tout est enregistré. {1}Paratext utilise les nouvelles entrées après son redémarrage. La ligne jaune est là pour vous le rappeler."
+      }
+    },
+    {
+      "id": "sec_install",
+      "en": {
+        "title": "Installing the tool",
+        "q": "How do I install the tool?",
+        "text": "Installing the tool."
+      },
+      "es": {
+        "title": "Instalar la herramienta",
+        "q": "¿Cómo instalo la herramienta?",
+        "text": "Cómo instalar la herramienta."
+      },
+      "fr": {
+        "title": "Installer l'outil",
+        "q": "Comment installer l'outil ?",
+        "text": "Comment installer l'outil."
+      }
+    },
+    {
+      "id": "i5_ready",
+      "en": {
+        "title": "Ready to use",
+        "text": "Start Paratext again. {1,0}AutoCorrect Editor is now on the Tools menu."
+      },
+      "es": {
+        "title": "Listo para usar",
+        "text": "Vuelva a abrir Paratext. {1,0}El Editor de autocorrección ya está en el menú Herramientas."
+      },
+      "fr": {
+        "title": "Prêt à l'emploi",
+        "text": "Redémarrez Paratext. {1,0}L'Éditeur de correction automatique se trouve maintenant dans le menu Outils."
+      }
+    },
+    {
+      "id": "end",
+      "en": {
+        "title": "AutoCorrect Editor",
+        "sub": "Any character, with combining marks  ·  Saved in the project  ·  Restart Paratext after saving",
+        "text": "AutoCorrect Editor helps you build any character, including letters with combining marks, and saves the list in the project's own autocorrect file. Remember to restart Paratext after you save."
+      },
+      "es": {
+        "title": "Editor de autocorrección",
+        "sub": "Cualquier carácter, con marcas combinables  ·  Se guarda en el proyecto  ·  Reinicie Paratext después de guardar",
+        "text": "El Editor de autocorrección le ayuda a formar cualquier carácter, también letras con marcas combinables, y guarda la lista en el propio archivo de autocorrección del proyecto. Recuerde reiniciar Paratext después de guardar."
+      },
+      "fr": {
+        "title": "Éditeur de correction automatique",
+        "sub": "Tout caractère, avec diacritiques combinants  ·  Enregistré dans le projet  ·  Redémarrez Paratext après l'enregistrement",
+        "text": "L'Éditeur de correction automatique vous aide à former n'importe quel caractère, y compris des lettres avec diacritiques combinants, et enregistre la liste dans le fichier de correction automatique du projet. N'oubliez pas de redémarrer Paratext après l'enregistrement."
+      }
+    }
+  ]
+}

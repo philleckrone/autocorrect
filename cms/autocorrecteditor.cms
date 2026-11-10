@@ -1,0 +1,7 @@
+﻿\check AutoCorrect Editor
+\subMenu AutoCorrect
+\script autocorrecteditor.py
+\description Opens the AutoCorrect Editor for this project's autocorrect.txt file
+\noText
+\toHtml 
+\utf8

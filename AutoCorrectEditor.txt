@@ -1,0 +1,68 @@
+AUTOCORRECT EDITOR
+==================
+
+PURPOSE
+Standalone desktop tool for Paratext translators to create and maintain
+autocorrect.txt files without needing Paratext open. The editor reads and
+writes Paratext's expected file format (UTF-16 LE encoding, one entry per
+line in the form TypeSequence-->OutputCharacter).
+
+VIDEO OVERVIEW
+https://www.loom.com/share/3e0abe19ed7042229a655fde8f42482e
+
+HOW TO USE
+----------
+1. Open an existing autocorrect.txt file via File > Open, or start a new
+   file with File > New.
+
+2. To add an entry:
+   - Type the key sequence (what you type in Paratext) in the "Type sequence"
+     field.
+   - Type or select the output character in the "Output character" field.
+   - Click Add or press Enter. The entry appears in the list above.
+
+3. To edit an entry:
+   - Click its row in the list. The fields below populate with the current
+     values and the Add button changes to Update.
+   - Modify the fields and click Update (or press Enter).
+   - Click Clear to cancel without saving changes.
+
+4. To delete an entry:
+   - Select its row and press the Delete key, or use Edit > Delete Entry.
+
+5. To find a character using the browser:
+   - Choose a Unicode block from the "Block" dropdown at the bottom of the
+     window.
+   - Optionally filter by typing a character or hex code point (e.g. 00E0)
+     in the Search box.
+   - Click any character to insert it into whichever input field was last
+     focused (Type sequence or Output character).
+
+6. Use the Font and Size dropdowns in the toolbar to preview characters in
+   your script.
+
+7. Save with File > Save (Ctrl+S) or File > Save As (Ctrl+Shift+S).
+   The yellow banner at the top of the window is a reminder to restart
+   Paratext after saving so that changes take effect.
+
+FEATURES
+--------
+  Multilingual UI
+    Interface text is available in English, Espanol, Francais, Portugues,
+    and Simplified Chinese. Change language from the Language dropdown in
+    the toolbar.
+
+  Encoding detection
+    When opening an existing file the editor automatically detects UTF-16 LE,
+    UTF-16 BE, or UTF-8 encoding. It always writes in UTF-16 LE with BOM,
+    which is the format Paratext expects.
+
+  Character browser
+    Covers 13 Unicode blocks: Basic Latin, Latin-1 Supplement,
+    Latin Extended-A, Latin Extended-B, Combining Diacritical Marks,
+    Greek and Coptic, Hebrew, Arabic, Syriac, Ethiopic, Latin Extended
+    Additional, General Punctuation, and Currency Symbols.
+
+  Unsaved-changes tracking
+    An asterisk (*) appears in the title bar and status bar whenever there
+    are unsaved changes. Opening a new file or exiting will prompt to save.

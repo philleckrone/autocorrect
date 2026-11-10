@@ -1,0 +1,5 @@
+C:\ClaudeCode Projects\AutoCorrect\AutoCorrectPlugin\bin\Release\AutoCorrectEditorPlugin.dll
+C:\ClaudeCode Projects\AutoCorrect\AutoCorrectPlugin\bin\Release\AutoCorrectEditorPlugin.pdb
+C:\ClaudeCode Projects\AutoCorrect\AutoCorrectPlugin\obj\Release\AutoCorrectPlugin.csprojResolveAssemblyReference.cache
+C:\ClaudeCode Projects\AutoCorrect\AutoCorrectPlugin\obj\Release\AutoCorrectEditorPlugin.dll
+C:\ClaudeCode Projects\AutoCorrect\AutoCorrectPlugin\obj\Release\AutoCorrectEditorPlugin.pdb

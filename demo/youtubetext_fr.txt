@@ -1,0 +1,20 @@
+﻿L'Éditeur de correction automatique est un outil Paratext pour la liste de correction automatique d'un projet : les touches que vous tapez, et le caractère spécial que Paratext met à leur place. Ajoutez, modifiez et supprimez des entrées, et formez n'importe quel caractère, y compris des lettres avec diacritiques combinants, grâce au Navigateur de caractères.
+
+Téléchargez l'outil (AutoCorrectEditor.zip) dans le dossier Paratext Plugins :
+https://short.do/HgUb7T
+
+0:25 Comment ouvrir l'Éditeur de correction automatique ?
+0:32 Que montre la liste ?
+0:55 Comment ajouter une entrée ?
+1:10 Comment trouver des caractères spéciaux et des diacritiques combinants ?
+1:28 Comment former une lettre avec un diacritique, comme a avec macron souscrit ?
+1:48 Comment savoir si l'entrée a été ajoutée ?
+2:10 Comment modifier ou supprimer une entrée ?
+2:28 Puis-je changer la police ou la langue du programme ?
+2:41 Comment enregistrer la liste ?
+2:51 Pourquoi Paratext n'utilise-t-il pas encore mes nouvelles entrées ?
+3:02 Comment installer l'outil ?
+
+Créé avec Claude AI.
+Narration : voix générée par IA (Microsoft Azure AI Speech, voix « Rémy »).
+Musique : « Smile » de Bensound, © Bensound. Music: https://www.bensound.com
