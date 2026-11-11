@@ -21,7 +21,7 @@ function Get-AzureSpeechSetting($name) {
 # keep the written word, the voice says the alias (SSML <sub>). "Paratext" as "PEARatext" is the
 # user's request.
 $script:SayAs = @{
-    'en' = @{ 'Paratext' = 'Pair-uh-text'; '0331' = 'zero, 3, 3, 1'; '0061' = 'zero, zero, 6, 1' }
+    'en' = @{ 'Paratext' = 'Pair-uh-text'; "Paratext's" = 'Pair-uh-texts'; '0331' = 'zero, 3, 3, 1'; '0061' = 'zero, zero, 6, 1' }
     # Unicode codes digit by digit (this file stays ASCII: [char] for the accents).
     'es' = @{ '0331' = 'cero, tres, tres, uno'; '0061' = 'cero, cero, seis, uno' }
     'fr' = @{ '0331' = "z$([char]0xE9)ro, trois, trois, un"; '0061' = "z$([char]0xE9)ro, z$([char]0xE9)ro, six, un" }
@@ -34,10 +34,19 @@ function Speak-Azure([string]$Text, [string]$Voice, [string]$OutFile, [string]$R
     $lang = ($Voice -split '-')[0..1] -join '-'
     $esc = [Security.SecurityElement]::Escape($Text)
     $words = $script:SayAs[($lang -split '-')[0]]
-    if ($words) {
-        foreach ($w in $words.Keys) {
-            $esc = [regex]::Replace($esc, '\b' + [regex]::Escape($w) + '\b', "<sub alias='$($words[$w])'>$w</sub>")
-        }
+    if ($words -and $words.Count) {
+        # One pattern for all the words, longest first, so "Paratext's" wins over "Paratext" and no
+        # <sub> lands inside another. The words are matched as the text was escaped above (' is
+        # &apos;); a typographic apostrophe is accepted too.
+        $keys = @($words.Keys | Sort-Object { $_.Length } -Descending)
+        $alts = @($keys | ForEach-Object { [regex]::Escape([Security.SecurityElement]::Escape($_)).Replace('&apos;', "(?:&apos;|$([char]0x2019))") })
+        $rx = New-Object Text.RegularExpressions.Regex ('(?<!\w)(' + ($alts -join '|') + ')(?!\w)')
+        $esc = $rx.Replace($esc, [Text.RegularExpressions.MatchEvaluator] {
+            param($m)
+            $i = 0
+            for ($k = 0; $k -lt $keys.Count; $k++) { if ([regex]::IsMatch($m.Value, '^(?:' + $alts[$k] + ')$')) { $i = $k; break } }
+            "<sub alias='$($words[$keys[$i]])'>$($m.Value)</sub>"
+        })
     }
     $ssml = "<speak version='1.0' xmlns='http://www.w3.org/2001/10/synthesis' xml:lang='$lang'>" +
         "<voice name='$Voice'><prosody rate='$Rate'>$esc</prosody></voice></speak>"
