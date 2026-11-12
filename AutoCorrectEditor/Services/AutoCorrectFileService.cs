@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
@@ -20,13 +21,13 @@ namespace AutoCorrectEditor.Services
                 string line;
                 while ((line = reader.ReadLine()) != null)
                 {
-                    if (!pastHeader && (string.IsNullOrWhiteSpace(line) || line.TrimStart().StartsWith("#")))
+                    if (!pastHeader && (string.IsNullOrWhiteSpace(line) || line.TrimStart().StartsWith("#", StringComparison.Ordinal)))
                     {
                         headerLines.Add(line);
                         continue;
                     }
 
-                    int idx = line.IndexOf("-->");
+                    int idx = line.IndexOf("-->", StringComparison.Ordinal);   // ordinal: a culture-sensitive search missed --> after apostrophes ('''-->)
                     if (idx >= 0)
                     {
                         pastHeader = true;

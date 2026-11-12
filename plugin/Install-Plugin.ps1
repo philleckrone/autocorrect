@@ -63,8 +63,11 @@ $exeProtected = ('0' -eq '1') -and [bool]$exeFile
 $pluginFolderFiles = @($pluginFile)
 if ($exeFile -and -not $exeProtected) { $pluginFolderFiles += $exeFile }
 $sourceDir  = Join-Path $PSScriptRoot $folderName
+# Files an older version of this plugin left in its plugins folder: install and uninstall
+# delete them, so the folder is not left behind with no plugin in it.
+$oldFiles = @()
 # SHA-256 of each package file, written by make_installers.py.
-$expectedHashes = @{ 'AutoCorrectEditorPlugin.ptxplg' = '808fd65bd9c47ab76d650b335262364ec334af973399e1ae075b62d6eafc3f61'; 'AutoCorrectEditor.exe' = '169212705cbe6b80948714769571217880de77668d1260e277b549f8133adb1e' }
+$expectedHashes = @{ 'AutoCorrectEditorPlugin.ptxplg' = '163fdee7472ee1fb401c3181c903b1810ba4776a3c1781d474031200bc3bf38d'; 'AutoCorrectEditor.exe' = 'c8adcc7b026f7ef460e20c57669a02b0791704eb88ceb326332790b82116f4f2' }
 # Windows PowerShell by its real path, never through PATH or the current folder.
 $powershellExe = Join-Path ([Environment]::SystemDirectory) 'WindowsPowerShell\v1.0\powershell.exe'
 
@@ -446,6 +449,7 @@ function Install-PluginFiles($installs, $packageBytes) {
         foreach ($p in $i, $plugins, $target) { Assert-NotReparsePoint $p }
         if (-not (Test-Path -LiteralPath $target)) { New-Item -ItemType Directory -Path $target | Out-Null }
         foreach ($f in $pluginFolderFiles) { Write-OwnFile $target $f $packageBytes[$f] }
+        foreach ($f in $oldFiles) { if (Remove-OwnFile $target $f) { Write-Host "  Removed $f, left by an older version." } }
         # A protected program left in the plugins folder by an older version is removed.
         if ($exeProtected -and (Remove-OwnFile $target $exeFile)) { Write-Host "  Removed the old copy of $exeFile from the plugins folder." }
     }
@@ -458,7 +462,7 @@ function Remove-PluginFiles($installs) {
         $target = Join-Path $plugins $folderName
         if (-not (Test-Path -LiteralPath $target)) { Write-Host "Not installed in $i"; continue }
         foreach ($p in $i, $plugins, $target) { Assert-NotReparsePoint $p }
-        foreach ($f in $packageFiles) { Remove-OwnFile $target $f | Out-Null }
+        foreach ($f in @($packageFiles) + @($oldFiles)) { Remove-OwnFile $target $f | Out-Null }
         $left = @(Get-ChildItem -LiteralPath $target -Force)
         if ($left.Count -eq 0) {
             Assert-NotReparsePoint $target

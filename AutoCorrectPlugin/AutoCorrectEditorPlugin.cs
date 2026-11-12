@@ -34,12 +34,12 @@ namespace AutoCorrectPlugin
 
         public Version Version
         {
-            get { return new Version(1, 0, 0, 0); }
+            get { return new Version(1, 1, 0, 0); }
         }
 
         public string VersionString
         {
-            get { return "1.0"; }
+            get { return "1.1"; }
         }
 
         public string Publisher
